@@ -1,11 +1,11 @@
 <?php
 
 /*
-Plugin Name: WP-OAuth
-Plugin URI: http://github.com/perrybutler/wp-oauth
-Description: A WordPress plugin that allows users to login or register by authenticating with an existing Google, Facebook, LinkedIn, Github, Reddit or Windows Live account via OAuth 2.0. Easily drops into new or existing sites, integrates with existing users.
-Version: 0.4
-Author: Perry Butler
+Plugin Name: TSATU-Google
+Plugin URI: https://github.com/andriiryzhkov/tsatu-google
+Description: A WordPress plugin that allows users to login or register by authenticating with an existing Google account via OAuth 2.0.
+Version: 0.1
+Author: Perry Butler, Andrii Ryzhkov
 Author URI: http://glassocean.net
 License: GPL2
 */
@@ -257,8 +257,8 @@ Class WPOA {
 		// we always need jquery:
 		wp_enqueue_script('jquery');
 		// load the core plugin scripts/styles:
-		wp_enqueue_script('wpoa-script', plugin_dir_url( __FILE__ ) . 'wp-oauth.js', array());
-		wp_enqueue_style('wpoa-style', plugin_dir_url( __FILE__ ) . 'wp-oauth.css', array());
+		wp_enqueue_script('wpoa-script', plugin_dir_url( __FILE__ ) . 'tsatu-google.js', array());
+		wp_enqueue_style('wpoa-style', plugin_dir_url( __FILE__ ) . 'tsatu-google.css', array());
 	}
 	
 	// init scripts and styles for use on BACKEND PAGES:
@@ -282,8 +282,8 @@ Class WPOA {
 		// we always need jquery:
 		wp_enqueue_script('jquery');
 		// load the core plugin scripts/styles:
-		wp_enqueue_script('wpoa-script', plugin_dir_url( __FILE__ ) . 'wp-oauth.js', array());
-		wp_enqueue_style('wpoa-style', plugin_dir_url( __FILE__ ) . 'wp-oauth.css', array());
+		wp_enqueue_script('wpoa-script', plugin_dir_url( __FILE__ ) . 'tsatu-google.js', array());
+		wp_enqueue_style('wpoa-style', plugin_dir_url( __FILE__ ) . 'tsatu-google.css', array());
 		// load the default wordpress media screen:
 		wp_enqueue_media();
 	}
@@ -313,8 +313,8 @@ Class WPOA {
 		// we always need jquery:
 		wp_enqueue_script('jquery');
 		// load the core plugin scripts/styles:
-		wp_enqueue_script('wpoa-script', plugin_dir_url( __FILE__ ) . 'wp-oauth.js', array());
-		wp_enqueue_style('wpoa-style', plugin_dir_url( __FILE__ ) . 'wp-oauth.css', array());
+		wp_enqueue_script('wpoa-script', plugin_dir_url( __FILE__ ) . 'tsatu-google.js', array());
+		wp_enqueue_style('wpoa-style', plugin_dir_url( __FILE__ ) . 'tsatu-google.css', array());
 	}
 	
 	// add a settings link to the plugins page:
@@ -864,7 +864,7 @@ Class WPOA {
 			wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 		}
 		$blog_url = rtrim(site_url(), "/") . "/";
-		include 'wp-oauth-settings.php';
+		include 'tsatu-google-settings.php';
 	}
 } // END OF WPOA CLASS
 
