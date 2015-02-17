@@ -82,31 +82,6 @@ Class WPOA {
 		'wpoa_google_api_enabled' => 0,									// 0, 1
 		'wpoa_google_api_id' => '',										// any string
 		'wpoa_google_api_secret' => '',									// any string
-		'wpoa_facebook_api_enabled' => 0,								// 0, 1
-		'wpoa_facebook_api_id' => '',									// any string
-		'wpoa_facebook_api_secret' => '',								// any string
-		'wpoa_linkedin_api_enabled' => 0,								// 0, 1
-		'wpoa_linkedin_api_id' => '',									// any string
-		'wpoa_linkedin_api_secret' => '',								// any string
-		'wpoa_github_api_enabled' => 0,									// 0, 1
-		'wpoa_github_api_id' => '',										// any string
-		'wpoa_github_api_secret' => '',									// any string
-		'wpoa_reddit_api_enabled' => 0,									// 0, 1
-		'wpoa_reddit_api_id' => '',										// any string
-		'wpoa_reddit_api_secret' => '',									// any string
-		'wpoa_windowslive_api_enabled' => 0,							// 0, 1
-		'wpoa_windowslive_api_id' => '',								// any string
-		'wpoa_windowslive_api_secret' => '',							// any string
-		'wpoa_paypal_api_enabled' => 0,									// 0, 1
-		'wpoa_paypal_api_id' => '',										// any string
-		'wpoa_paypal_api_secret' => '',									// any string
-		'wpoa_paypal_api_sandbox_mode' => 0,							// 0, 1
-		'wpoa_instagram_api_enabled' => 0,								// 0, 1
-		'wpoa_instagram_api_id' => '',									// any string
-		'wpoa_instagram_api_secret' => '',								// any string
-		'wpoa_battlenet_api_enabled' => 0,								// 0, 1
-		'wpoa_battlenet_api_id' => '',									// any string
-		'wpoa_battlenet_api_secret' => '',								// any string
 		'wpoa_http_util' => 'curl',										// curl, stream-context
 		'wpoa_http_util_verify_ssl' => 1,								// 0, 1
 		'wpoa_restore_default_settings' => 0,							// 0, 1
@@ -702,14 +677,6 @@ Class WPOA {
 		// TODO: don't hard-code the buttons/providers here, we want to be able to add more providers without having to update this function...
 		$html = "";
 		$html .= $this->wpoa_login_button("google", "Google", $atts);
-		$html .= $this->wpoa_login_button("facebook", "Facebook", $atts);
-		$html .= $this->wpoa_login_button("linkedin", "LinkedIn", $atts);
-		$html .= $this->wpoa_login_button("github", "GitHub", $atts);
-		$html .= $this->wpoa_login_button("reddit", "Reddit", $atts);
-		$html .= $this->wpoa_login_button("windowslive", "Windows Live", $atts);
-		$html .= $this->wpoa_login_button("paypal", "PayPal", $atts);
-		$html .= $this->wpoa_login_button("instagram", "Instagram", $atts);
-		$html .= $this->wpoa_login_button("battlenet", "Battlenet", $atts);
 		if ($html == '') {
 			$html .= 'Sorry, no login providers have been enabled.';
 		}
@@ -764,7 +731,7 @@ Class WPOA {
 				break;
 			}
 		}
-		$atts;
+		//$atts;
 		//echo print_r($found);
 		if ($found) {
 			if ($as_string) {
